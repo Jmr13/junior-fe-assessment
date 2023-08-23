@@ -1,0 +1,315 @@
+:root {
+    --primary-color: white;
+    --secondary-color: #cc061d;
+    --shadow: -4px 3px 2px rgba(0,0,0,0.3);
+}
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    box-sizing: border-box;
+}
+*::before {
+    padding: 0;
+    margin: 0;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    box-sizing: border-box;
+}
+*::after {
+    padding: 0;
+    margin: 0;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body, input, textarea {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 200;
+}
+h1 {
+    font-weight: 800;
+    font-size: 3rem;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2vh 4vw;
+    background-color: var(--primary-color);
+    color: black;
+    text-align: center;
+    font-weight: 800;
+}
+.navlogo {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.navlogo img {
+    height: 50px;
+    width: 100px;
+}
+.hamburger_menu {
+    font-size: 1rem;
+    cursor: pointer;
+}
+.navlinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 0 2vw;
+    cursor: pointer;
+    padding: 2vh 0;
+}
+.navlinks div {
+    width: 100%;
+    padding: 2vh 0;
+    transition: all 0.50s ease-in-out;
+}
+.navlinks div:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+.hide {
+    display: none;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    position: relative;
+    padding: 20vh 4vh 20vh 6vw;
+    overflow: hidden;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+main h1 {
+    margin-top: 10vh;
+    margin-left: 2vh;
+    z-index: 5;
+}
+main p {
+    width: 50vh;
+    margin-left: 2vh;
+    z-index: 5;
+}
+main img {
+    position: absolute;
+    bottom: 0;
+    left: 6vw;
+    height: 80%;
+}
+main button {
+    all: unset;
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    padding: 1vh 2vw;
+    cursor: pointer;
+    width: 20vw;
+    text-align: center;
+    margin-left: 2vh;
+    z-index: 5;
+}
+main button:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+.products_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10vh;
+    padding: 20vh 4vh 20vh 6vw;
+}
+.product_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10vh 1vw;
+}
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1vh 5vw;
+    width: 60%;
+    padding: 5vh 2vw 2vh 2vw;
+    border: 1px solid var(--secondary-color)
+}
+.product:hover {
+    background-color: var(--secondary-color);
+}
+.product img {
+    width: 70%;
+    transform: scale(1.75) translateY(-3vh);
+}
+.product .product_buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.product .product_buttons button {
+    all: unset;
+    background-color: transparent;
+    border: 1px solid black;
+    padding: 1vh 1vw;
+    cursor: pointer;
+    text-align: center;
+    z-index: 5;
+}
+.product .product_buttons button:hover {
+    background-color: black;
+    color: var(--primary-color);
+}
+.about_section {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    padding: 20vh 4vh 20vh 6vw;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+.about_section h1 {
+    text-align: center;
+}
+.about_section button {
+    all: unset;
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    padding: 1vh 2vw;
+    cursor: pointer;
+    text-align: center;
+    width: 20%;
+    align-self: flex-end;
+}
+.about_section button:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+.cta_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3vh;
+    position: relative;
+    padding: 20vh 4vh 20vh 6vw;
+    background-color: var(--primary-color);
+    color: black;
+    overflow: hidden;
+}
+.cta_section h1 {
+    margin-top: 10vh;
+    z-index: 5;
+}
+.cta_section p {
+    width: 40vh;
+    z-index: 5;
+}
+.cta_section img {
+    position: absolute;
+    left: 40vw;
+    width: 100%;
+    opacity: .25;
+}
+.cta_section button {
+    all: unset;
+    background-color: transparent;
+    border: 1px solid black;
+    padding: 1vh 2vw;
+    cursor: pointer;
+    width: 20vw;
+    text-align: center;
+    z-index: 5;
+}
+.cta_section button:hover {
+    background-color: black;
+    color: var(--primary-color);
+}
+.contact_section {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    padding: 10vh 10vw;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+.contact_section h1 {
+    text-align: center;
+}
+.contact_section input, .contact_section textarea {
+    all: unset;
+    padding: 2vh 4vw;
+    cursor: auto;
+    background-color: var(--primary-color);
+    color: black;
+}
+.contact_section button {
+    all: unset;
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    padding: 3vh 2vw;
+    cursor: pointer;
+    text-align: center;
+}
+.contact_section button:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+@media only screen and (min-width : 768px) {
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        padding: 2vh 8vw;
+    }
+    .navlinks {
+        display: flex;
+        flex-direction: row;
+        gap: 0 2vw;
+        cursor: pointer;
+        width: auto;
+    }
+    .navlinks div {
+        border-bottom: 1px solid var(--primary-color);
+    }
+    .navlinks div:hover {
+        all: unset;
+        border-bottom: 1px solid var(--secondary-color);
+    }
+    .navlogo {
+        width: auto;
+    }
+    .hamburger_menu {
+        display: none;
+    }
+    main, .products_section, .about_section, .cta_section {
+        padding: 20vh 8vh 20vh 12vw;
+    }
+    .cta_section {
+        padding: 30vh 30vw 30vh 30vw;
+    }
+    main img {
+        height: 100%;
+        left: auto;
+        right: 0;
+    }
+    .product {
+        gap: 1vh 5vw;
+        width: 30%;
+    }
+    .cta_section img {
+        right: 0;
+        width: 60%;
+    }
+    .contact_section {
+        padding: 10vh 30vw;
+    }
+}

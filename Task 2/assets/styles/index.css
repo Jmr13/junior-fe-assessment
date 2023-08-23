@@ -35,7 +35,7 @@ body {
     flex-direction: column;
     height: 100vh;
     width: 80vw;
-    padding: 5vh 10vw;
+    padding: 5vh 3vw;
 }
 .task_add {
     display: flex;
@@ -94,4 +94,9 @@ body {
     border-radius: 5px;
     cursor: pointer;
     color: var(--secondary-color);
+}
+@media only screen and (min-width : 768px) {
+    .container {
+        padding: 5vh 10vw;
+    }
 }

@@ -1,17 +1,26 @@
 function addTask() {
     let newTaskId = localStorage.length;
     let newTaskValue = document.querySelector(`.newTask`).value;
-    let newTask = JSON.stringify({taskName: newTaskValue, isCompleted: false})
-    localStorage.setItem(newTaskId, newTask);
-    Swal.fire({
-        icon: 'success',
-        title: 'Added a task',
-        confirmButtonText: 'Okay'
-    }).then((result) => {
-        if (result.isConfirmed) {
-            location.reload(); 
-        }
-    })
+    if(newTaskValue != '') {
+        let newTask = JSON.stringify({taskName: newTaskValue, isCompleted: false})
+        localStorage.setItem(newTaskId, newTask);
+        Swal.fire({
+            icon: 'success',
+            title: 'Added a task',
+            confirmButtonText: 'Okay'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                location.reload(); 
+            }
+        })
+    }
+    else {
+        Swal.fire({
+            icon: 'warning',
+            title: 'Please input a text first',
+            confirmButtonText: 'Okay'
+        })
+    }
 }
 
 function completeTask() {
